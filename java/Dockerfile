@@ -4,7 +4,7 @@ RUN wget -O jdk-8u171-linux-x64.tar.gz "https://s3.cn-northwest-1.amazonaws.com.
   && tar xzf jdk-8u171-linux-x64.tar.gz \
   && mv jdk1.8.0_172/* /usr/local/java \
   && rm jdk-8u171-linux-x64.tar.gz
-ENV JAVA_HOME /usr/local/jav
+ENV JAVA_HOME /usr/local/java
 ENV JRE_HOME $JAVA_HOME/jre
 ENV CLASSPATH $JRE_HOME/lib
 ENV PATH $JAVA_HOME/bin:$PATH
