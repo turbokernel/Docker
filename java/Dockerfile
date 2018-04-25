@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM ubuntu:16.04
 RUN wget -O jdk-8u171-linux-x64.tar.gz "https://s3.cn-northwest-1.amazonaws.com.cn/public-files/jdk-8u172-linux-x64.tar.gz" \
   && mkdir -p /usr/local/java \
   && tar xzf jdk-8u171-linux-x64.tar.gz \
