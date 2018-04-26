@@ -1,10 +1,11 @@
 FROM frolvlad/alpine-oraclejdk8:full
 
 RUN mkdir -pv /var/jira &&\
-		wget https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-7.9.1.tar.gz && \
-		tar xzf atlassian-jira-software-7.9.1.tar.gz -C /opt && \
-		mv /opt/atlassian-jira-software-7.4.2-standalone /opt/jira
-COPY mysql-connector-java-8.0.11.jar /opt/jira/lib/
+		wget http://ltpmedia-1253180657.file.myqcloud.com/atlassian-jira-software-7.2.2.tar.gz && \
+		tar xzf atlassian-jira-software-7.2.2.tar.gz -C /opt && \
+		mv /opt/atlassian-jira-software-7.2.2-standalone /opt/jira
+COPY mysql-connector-java-5.1.39-bin.jar /opt/jira/atlassian-jira/WEB-INF/lib/
+COPY atlassian-extras-3.1.2.jar /opt/jira/atlassian-jira/WEB-INF/lib/
 ENV JAVA_HOME="/usr/lib/jvm/default-jvm"
 ENV JIRA_HOME="/var/jira"
 VOLUME ["/opt/jira","/var/jira"]
