@@ -1,6 +1,6 @@
 FROM frolvlad/alpine-oraclejdk8:full
 
-RUN mkdir -pv /var/jira &&\
+RUN mkdir -pv /var/jira /opt &&\
 		wget https://s3.cn-northwest-1.amazonaws.com.cn/public-files/atlassian-jira-software-7.2.2.tar.gz && \
 		tar xzf atlassian-jira-software-7.2.2.tar.gz -C /opt && \
 		mv /opt/atlassian-jira-software-7.2.2-standalone /opt/jira
